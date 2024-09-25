@@ -1,2 +1,37 @@
-https://blog.damavis.com/los-principios-solid-ilustrados-en-ejemplos-sencillos-de-python/
-https://dev.to/marquitobb/principios-solid-aplicados-en-python-352m
+1. Principio de Responsabilidad Única (Single Responsibility Principle - SRP)
+Este principio establece que una clase debe tener una sola razón para cambiar, es decir, una clase debe tener una única responsabilidad.
+
+2. Principio Abierto/Cerrado (Open/Closed Principle - OCP)
+Este principio establece que las clases deben estar abiertas para extensión, pero cerradas para modificación. Esto significa que deberías poder extender el comportamiento de una clase sin modificar su código fuente.
+
+3. Principio de Sustitución de Liskov (Liskov Substitution Principle - LSP)
+El principio LSP establece que una clase derivada debe poder reemplazar a su clase base sin alterar el comportamiento del programa.
+
+4. Principio de Segregación de Interfaces (Interface Segregation Principle - ISP)
+El ISP establece que los clientes no deberían estar obligados a depender de interfaces que no usan. En lugar de tener interfaces grandes, es mejor dividirlas en interfaces más pequeñas y específicas.
+
+5. Principio de Inversión de Dependencias (Dependency Inversion Principle - DIP)
+El DIP establece que las clases de alto nivel no deben depender de las clases de bajo nivel. Ambas deben depender de abstracciones (interfaces). Esto permite desacoplar las clases y facilita el cambio de dependencias.
+
+Resumen:
+SRP: Una clase debe tener una sola responsabilidad.
+OCP: Las clases deben estar abiertas para su extensión, pero cerradas para modificaciones.
+LSP: Las subclases deben ser sustituibles por sus clases base sin alterar el comportamiento del programa.
+ISP: Divide interfaces grandes en interfaces más específicas.
+
+Clases Abstractas
+Una clase abstracta es una clase que no puede ser instanciada directamente, y puede contener tanto métodos abstractos (métodos sin implementación) como métodos con implementación. Su propósito es definir un comportamiento común que las subclases concretas deben seguir, pero dejando parte de la implementación a las subclases.
+
+Características:
+Puede contener tanto métodos abstractos (sin cuerpo) como métodos concretos (con cuerpo).
+No puede ser instanciada directamente; debe ser heredada por una clase concreta.
+Define un comportamiento base común para las clases que la heredan.
+
+Interfaces
+Una interfaz es una especie de contrato que define un conjunto de métodos abstractos que una clase debe implementar. En algunos lenguajes de programación (como Java), una interfaz no puede tener implementación de métodos. En Python, no hay un concepto formal de "interfaz" como tal, pero el comportamiento de una interfaz se puede simular mediante el uso de clases abstractas que solo tienen métodos abstractos.
+
+Características:
+Solo define métodos abstractos, sin implementación (en la mayoría de los casos).
+Todas las clases que implementen la interfaz deben proporcionar una implementación de todos sus métodos.
+No contiene atributos ni métodos concretos (en su forma pura).
+Garantiza que las clases que implementan la interfaz sigan el mismo contrato, lo que asegura un comportamiento uniforme.
